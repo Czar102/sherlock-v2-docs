@@ -86,7 +86,8 @@ Also, Watsons must outline all constraints of the issue being triggered and spec
     As mentioned in the standards observed, in the case of a restricted admin, the restriction must be clearly mentioned for any issue in this category to be considered valid&#x20;
 6. **Contract / Admin Address Blacklisting / Freezing:** If a protocol's smart contracts or admin addresses get added to a "blacklist" and the functionality of the protocol is affected by this blacklist, this is not considered a valid issue. \
    However, there could be cases where an attacker would use a blacklisted address to cause harm to a protocol functioning. [Example(Valid)](https://github.com/sherlock-audit/2022-11-opyn-judging/issues/219)
-7. **Front-running initializers:** Front-running initializers where there is no irreversible damage or loss of funds & the protocol could just redeploy and initialize again is not a valid issue.
+7. **Breaking deployment during setup:** Making a deployment fail where there is no irreversible damage or loss of funds & the protocol could just redeploy and initialize again is not a valid issue. \
+   **Exception:** If the state can be changed during the deployment in a way that allows for exploits in the future and is somewhat likely to remain undetected during the deployment, it may be a valid Medium.
 8. **User experience and design improvement issues:**  Issues that cause minor inconvenience to users where there is no material loss of funds are not considered valid. Funds are temporarily stuck and can be recovered by the administrator or owner. Also, if a submission is a design opinion/suggestion without any clear indications of loss of funds is not a valid issue.
 9. **User Blacklist:** User getting blacklisted by a token/contract causing harm only to themselves is **not** a valid medium/high.
 10. Issues assuming future opcode gas repricing are not considered to be of Medium/High severity. \
