@@ -25,16 +25,18 @@ This guide aims to provide clarity for both Watsons & protocols on various categ
 1. **Hierarchy of truth:** Contest README > Sherlock rules for valid issues > protocol documentation (including code comments) > protocol answers on the contest public Discord channel. \
    While considering the validity of an issue in case of any conflict the sources of truth are prioritized in the above order. \
    For example: In case of conflict between information in the README vs Sherlock rules, the README overrides Sherlock rules. \
-   **Exception**: Sometimes the README would take a wider group of impact/issue types out of scope than intended. In those cases, Sherlock may decide to consider an issue valid, while it would otherwise be considered out of scope. [Example(Valid)](https://github.com/sherlock-audit/2023-10-looksrare-judging/issues/136) \
+   **Exception**: Sometimes the README would take a wider group of impact/issue types out of scope than intended. In those cases, Sherlock may decide to consider an issue valid, while it would otherwise be considered out of scope. [Example(Valid)](https://github.com/sherlock-audit/2023-10-looksrare-judging/issues/136)
    1. If rules are updated, the new rules apply only to contests that start after the date of change. \
       Please check [criteria-changelog.md](criteria-changelog.md "mention") for information on the latest changes in the judging criteria/rules.
    
    **Historical decisions are not considered sources of truth.**
-2. **Could Denial-of-Service (DOS), griefing, or locking of contracts count as a Medium (or High) issue?** DoS has two separate scores on which it can become an issue:
+2. **Could Denial-of-Service (DOS), griefing, or locking of contracts count as a Medium (or High) issue?** \
+DoS has two separate scores on which it can become an issue:
    1. The issue causes locking of funds for users for more than a week.
    2. The issue impacts the availability of time-sensitive functions (cutoff functions are not considered time-sensitive) or functions whose unavailability would lock funds (effectively losing them if the DoS would be indefinite).
-If at least one of these are describing the case, the issue can be a Medium. If both apply, the issue can be considered of High severity. Additional constraints related to the issue may decrease its severity accordingly. \
-Griefing for gas (frontrunning a transaction to fail, even if can be done perpetually) is considered a DoS of a single block, hence only if the function is clearly time-sensitive, it can be a Medium severity issue.
+
+   If at least one of these are describing the case, the issue can be a Medium. If both apply, the issue can be considered of High severity. Additional constraints related to the issue may decrease its severity accordingly. \
+   Griefing for gas (frontrunning a transaction to fail, even if can be done perpetually) is considered a DoS of a single block, hence only if the function is clearly time-sensitive, it can be a Medium severity issue.
 3. **Low/Informational Issues**:  While Sherlock acknowledges that it would be great to include & reward low-impact/informational issues, we strongly feel that Watsons should focus on finding the most critical vulnerabilities that will potentially cause millions of dollars of losses on mainnet. Sherlock understands that it could be missing out on some potential "value add" for protocol, but it's only because the real task of finding critical vulnerabilities requires 100% of the attention of Watsons. While low/informational issues are not rewarded individually if a Watson identifies an attack vector that combines multiple lows to cause significant loss/damage that would still be categorized as a valid medium/high.
 4. **Direct Protocol Owner/Admin rug pulls.** If a protocol specifically mentions the restrictions imposed on the owner/admin, issues describing an attack that results in bypassing these restrictions can be considered valid. Please note that these restrictions must be explicitly described by the protocol and will be considered case by case. \
    Admin functions are assumed to be used properly, unless a list of requirements is listed and it's incomplete or if there is no scenario where a permissioned funtion can be used properly.
