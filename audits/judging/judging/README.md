@@ -95,7 +95,7 @@ Also, Watsons must outline all constraints of the issue being triggered and spec
 11. (repealed)
 12. **EIP compliance with no integrations**: If the protocol does not have external integrations then issues related to code not fully complying with the EIP it is implementing and there are no adverse effects of this, are considered informational
 13. **Users sending ETH/native tokens accidentally** just because a contract allows is **not** a valid medium/high.
-14. **Loss of airdrops or liquidity fees** or any other rewards that are not part of the original protocol design is not considered a valid high/medium. [Example](https://github.com/sherlock-audit/2023-02-openq-judging/issues/323)
+14. **Loss of airdrops** or any other rewards that are not part of the original protocol design is not considered a valid issue. [Example](https://github.com/sherlock-audit/2023-02-openq-judging/issues/323)
 15. **Use of Storage gaps:** Simple contracts with one of the parent contract not implementing storage gaps are considered low/informational. \
     **Exception**: However, if the protocol design has a highly complex and branched set of contract inheritance with storage gaps inconsistently applied throughout and the submission clearly describes the necessity of storage gaps it can be considered a valid medium. [Example](https://github.com/sherlock-audit/2022-09-notional-judging/issues/64)
 16. **Incorrect values in View functions** are by default considered **low**. \
