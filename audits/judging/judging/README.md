@@ -78,7 +78,7 @@ Also, Watsons must outline all constraints of the issue being triggered and spec
 1. **Gas optimizations:** The user/protocol ends up paying a little extra gas because of this issue.
 2. **Incorrect Event values:**  Incorrectly calculated/wrong values in emitted events are not considered valid medium or high.
 3. **Zero address checks:**  Check to make sure input values are not zero addresses.
-4. **User input validation:** User input validation to prevent user mistakes is not considered a valid issue. However, if a user input could result in a major protocol malfunction or significant loss of funds could be a valid high. [Example(Valid)](https://github.com/sherlock-audit/2022-10-illuminate-judging/issues/47)
+4. **User input validation:** Insufficient user input validation to prevent user mistakes is not considered a valid issue. However, this rule doesn't invalidate hacks caused by a lack of input validation. [Example(Valid)](https://github.com/sherlock-audit/2022-10-illuminate-judging/issues/47)
 5.  **Admin Input/call validation:**  Protocol admin is considered to be trusted in most cases, hence issues where
 
     1. Admin incorrectly enters an input parameter. Example: Make sure interestPerMin > 1 ether as it is an important parameter.  This is not a valid issue.
