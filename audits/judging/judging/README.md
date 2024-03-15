@@ -55,11 +55,11 @@ DoS has two separate scores on which it can become an issue:
 ### IV. How to identify a high issue:
 
 1. Definite loss of funds without (extensive) limitations of external conditions.
-2. Inflicts serious non-material losses (doesn't include contract simply not working). Can include violating core invariants or properties of the system.
+2. Inflicts serious non-financial losses (doesn't include contract simply not working). Can include violating core invariants or properties of the system.
 
 ### V. How to identify a medium issue:
 
-1. Causes a loss of funds but requires certain external conditions or specific states, or a loss is highly constrained. The losses must exceed small, finite amount of funds, and any amount relevant based on the precision or significance of the loss.
+1. Causes a loss of funds or any impact of potentially High severity but requires certain external conditions or specific states, or a loss is highly constrained. The losses must exceed small, finite amount of funds, and any amount relevant based on the precision or significance of the loss.
 2. Breaks **core** contract functionality. That could be by making some functionality unavailable, violating important invariants, locking funds in a contract, etc.
 
 ### VI. Requirements:
